@@ -1,0 +1,50 @@
+﻿@model Addmition__Elgibilty_K_A.Model.statues_of_admission_elgibilty
+
+@{
+    ViewData["Title"] = "Edit_setting_of_admition_elgibilty";
+}
+
+<h1>Edit_setting_of_admition_elgibilty</h1>
+
+<h4>statues_of_admission_elgibilty</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit_setting_of_admition_elgibilty">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="id" class="control-label"></label>
+                <input asp-for="id" class="form-control" />
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Type_Of_admission_elgibilty" class="control-label"></label>
+                <input asp-for="Type_Of_admission_elgibilty" class="form-control" />
+                <span asp-validation-for="Type_Of_admission_elgibilty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="begaining_date_of_the_process" class="control-label"></label>
+                <input asp-for="begaining_date_of_the_process" class="form-control" />
+                <span asp-validation-for="begaining_date_of_the_process" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="semesterNo" class="control-label"></label>
+                <input asp-for="semesterNo" class="form-control" />
+                <span asp-validation-for="semesterNo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="semesterDate" class="control-label"></label>
+                <input asp-for="semesterDate" class="form-control" />
+                <span asp-validation-for="semesterDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

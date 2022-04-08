@@ -1,0 +1,623 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "";
+}
+
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>مفاضلة جامعة القلمون الخاصة </title>
+
+<link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+		<style>
+             #khaled {
+                @*background-image: url('@Url.Content("~/logo images/back2.jpg")');*@
+                background-color: #f8f8f8;
+                height: fit-content;
+                /*	width:fit-content;*/
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+            }
+            .col-lg-1 {
+				margin:20px;
+            }
+            /*tisit style for tHe Cards......................................... */
+            .container1 {
+                min-width: 100vw;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #ffffff
+            }
+			
+.container1 .card {
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out
+}
+
+    .container1 .card:hover {
+        height: 450px
+    }
+
+    .container1 .card .imgContainer {
+        position: relative;
+        width: 125px;
+        height: 125px;
+        top: -50px;
+        left: 10px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
+    }
+
+        .container1 .card .imgContainer img {
+            max-width: 100%;
+            border-radius: 4px
+        }
+
+    .container1 .card .content1 {
+        position: relative;
+        margin-top: -70px;
+        padding: 10px 15px;
+        text-align: center;
+        color: #111;
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.3s ease-in-out
+    }
+
+    .container1 .card:hover .content1 {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+    }
+
+
+   /*this section about the downlaod button*/
+            .vn-blue a {
+                background-color: #2980b9;
+                display: inline-block;
+                position: relative;
+                margin: 30px 5px;
+                padding: 20px 20px 20px 80px;
+                color: #fff;
+                transition: all 0.4s ease
+            }
+
+                .vn-blue a:before {
+                    content: "\f019";
+                    font-family: fontAwesome;
+                    position: absolute;
+                    font-style: normal;
+                    font-weight: normal;
+                    text-decoration: inherit;
+                    font-size: 28px;
+                    border-radius: 0 20px 0 0;
+                    color: #000;
+                    background-color: #fff;
+                    opacity: 0.3;
+                    padding: 20px;
+                    top: 0;
+                    left: 0
+                }
+
+                .vn-blue a:hover {
+                    background: #2c3e50
+                }
+		</style>
+		
+		<!-- WEB FONTS -->
+		<link href='http://fonts.googleapis.com/css?family=Roboto:100,300,100italic,400,300italic' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+		
+		<!-- BOOTSTRAP -->
+		@*<link href="~/main_interface/css/bootstrap.min.css" rel="stylesheet">*@
+		<!-- FONT AWESOME -->
+		<link rel="stylesheet" href="~/main_interface/css/font-awesome.min.css">
+		<!-- CUSTOM STYLING -->
+		<link href="~/main_interface/css/styles.css" rel="stylesheet">
+		<!-- PRELOADER -->	
+		<link href="~/main_interface/css/loader.css" rel="stylesheet">
+		<!-- progress bar -->	
+<link href="~/main_interface/progressbar/progress.css" rel="stylesheet" />
+        <!-- 2 file  it is the style of the slider  -->	
+@*<link href="~/main_interface/2/css/style.css" rel="stylesheet" />*@
+<link href="~/main_interface/2/css/owl.carousel.min.css" rel="stylesheet" />
+	</head>
+	
+<body>
+	<!-- PRELOADER -->
+		<div id="loader-wrapper">
+			<img class="center-block"  width="180" height="208"  src="~/main_interface/images/logo.gif" />
+            <br/>
+		<div class="container2">
+    <div class="Loading"></div>
+  </div>
+
+			@*<div id="loader"><div class="sk-spinner sk-spinner-cube-grid"><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div><div class="sk-cube"></div></div></div>*@
+		</div>	
+		
+	<!-- HEADER -->
+		<section id="header">
+			<div class="container">
+                	<img  class="logo1 p-3 mb-2 bg-light position-relative" height="142" width="148" src="~/main_interface/images/Capture.PNG" />
+			
+				<div class="row text-center">
+                    
+					<div class="col-md-12">
+						
+						<h1 class="white-text position-relative " >أهلاً بك في مفاضلة جامعة القلمون الخاصة</h1>
+						<h4 class="white-text position-relative">بالحب لقيناكم وبقلوب الاّباء رعيناكم وإلى العلياء رفعناكم </h4>
+						<div id="countdown" class="white-text"></div>
+					</div>
+				</div>
+			</div>
+			<div class="animation">
+			<a class="arrow-down-animation" data-scroll href="#khaled"><i class="fa fa-angle-down"></i></a>
+			</div>
+		</section>
+	<!-- HEADER ENDS -->
+			
+	<!-- ABOUT -->
+        <div id="khaled">
+            <div ><h1 class="mt-2 bg-primary text-white" itemprop="headline">الكليّات والإختصاصات</h1></div>
+            <section id="about">
+                @*style="background-image: url('@Url.Content("~/logo images/back.jpg")')  ;"*@
+
+                <div class="containerlogs" data-sr="enter top over 1s, wait 0.3s, move 24px, reset">
+                    <div class="row justify-content-md-center dotted">
+                        <!-- Section 1 -->
+                        @*<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-2 middle" style="margin:10px" > </div>*@
+
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <div class='imgContainer'>               <img src="~/logo images/scince.png" /> </div>
+                            <div class="content">
+                                <h3>كلية العلوم التطبيقية</h3>
+                            </div>
+                            <div class="colored-line-small-center"></div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Architecture-Blue3D-120x120.png" />
+
+                            <h3>كلية الهندسة المدنية والمعمارية</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 3 -->
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Engineering-Orange-3D-120x120.png" />
+                            <h3>كلية الهندسة</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+
+                        <!-- Section 1 -->
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Phramcy-Blue-3D-120x120.png" />
+
+                            <h3>كلية الصيدلة</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 2 -->
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2 ">
+                            <img src="~/logo images/Dentistry-Orange3D-120x120.png" />
+
+                            <h3>كلية طب الأسنان</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 3 -->
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Medicene-Blue-3D-120x120.png" />
+                            <h3>كلية الطب البشري</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        @*<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-2" style="margin:10px" > </div>*@
+
+
+                    </div>
+                    @*<section id="about2">*@
+
+                    @*<div class="container">*@
+                    <div class="row justify-content-md-center">
+                        <!-- Section 1 -->
+                        @*<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-2 middle" style="margin:10px" > </div>*@
+
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Graduation-Blue3D-120x120.png" />
+
+                            <h3>الدراسات العليا</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 2 -->
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/reuirement-Orange-3D-120x120.png" />
+
+                            <h3>وحدة المتطلبات الجامعية</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 3 -->
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Health-Scince-Blue-3D-120x120.png" />
+
+                            <h3>كليةالعلوم الصحية</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+
+                        <!-- Section 1 -->
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Law-IR-Orange-3D-120x120.png" />
+
+                            <h3>كلية الحقوق والعلوم الإنسانية </h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 2 -->
+                        <div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Art-Media-Blue-3D-120x120.png" />
+
+                            <h3> كلية الإعلام والفنون التطبيقية</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        <!-- Section 3 -->
+                        <div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col col-lg-2">
+                            <img src="~/logo images/Managment-Orange-3D-120x120.png" />
+
+                            <h3>كلية الأعمال والإدارة</h3>
+                            <div class="colored-line-small-center"></div>
+                            @*<p>Lorem ipsum dolor sit amet, ed do eiusmod tempor incididunt ut labore et dolore magna.</p>*@
+                        </div>
+                        @*<div data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="col-md-2 middle" style="margin:10px" > </div>*@
+
+
+
+
+                    </div>
+                </div>
+            </section>
+    </div>
+   
+    
+  <div class="content" style="background-color: #f8f8f8 " >
+    
+    <div class="container border-bottom border-primary "  >
+
+      <h2 class="bg-primary text-white">عن كلياتنا وأهدافنا</h2>
+
+      <div class="d-flex carousel-nav">
+            <a href="#" class="col active">الطب البشري</a>
+           <a href="#" class="col">الأسنان</a>
+           <a href="#" class="col">الصيدلة</a>
+            <a href="#" class="col ">الهندسة</a>
+        <a href="#" class="col">العمارة والمدني</a>
+        <a href="#" class="col">العلوم التطبيقية</a>
+        <a href="#" class="col">الإعمال والإدارة</a>
+           <a href="#" class="col ">الإعلام و الفنون</a>
+        <a href="#" class="col">الحقوق</a>
+        @*<a href="#" class="col">العلوم الصحية</a>
+           <a href="#" class="col">المتطلبات الجامعية</a>*@
+     
+      </div>
+
+
+      <div class="owl-carousel owl-1">
+
+        <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/medicine.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; First Tab</a>*@
+            <h2>كلية الطب</h2>
+            <p>إنّ كليّة الطبّ البشريّ في جامعة القلمون الخاصّة هي أوّل كليّة طبّ في جامعة خاصّة في سورية.</p>
+              <p>تسعى الكليّة لتكون رائدة في إعداد الطبيب الممارس ذي الكفاءة العالية، القادر على تقديم العون الطبي المتميّز للمرضى، والمدرك لاحتياجات المجتمع الصحية، وتعمل على توثيّق الرّوابط الثّقافيّة بمختلف الكليّات الطبيّة والهيئات العلميّة في سورية، والمؤسسات الصحيّة العربيّة والأجنبيّة</p>
+          </div>
+        </div> <!-- .item -->
+
+        <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/dentis.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text " >
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; Second Tab</a>*@
+            <h2>كلية الأسنان</h2>
+            <p>تسعى كليّة طبّ الأسنان في جامعة القلمون الخاصّة إلى تدريّس علوم طب الأسنان المعاصرة لطلبة المرحلة الجامعيّة الأولى، بالشكل الذي يضمن بناء خريج ذي أساس متين من النّاحية العلميّة والعمليّة والأخلاقيّة، ليكون مؤهّلاً لمزاولة المهنة مباشرة أو متابعة البحث العلميّ في مختلف الجامعات الإقليميّة أو العالميّة.</p>
+              <p>ونعمل على تحقيّق ذلك بتوفيّر البيئة التّعليميّة النّموذجيّة بكل ما تشمله من كادر تدريّسي فعّال، وبنى تحتيّة مجهّزة بأحدث التّجهيزات
+
+(مخابر، عيادات، ومكتب قبول للمرضى) لضمان الخبرة العمليّة للطّلبة  بالتّوازي مع تقديّم المعالجات المجانيّة المتميّزة للمرضى.</p>
+          </div>
+        </div> <!-- .item -->
+
+        <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/pharmacy.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+           <h2>كلية الصيدلة</h2>
+            <p>تطمح كليّة الصّيدلة في جامعة القلمون الخاصّة  إلى تحقيق التميُّز الأكاديميّ والتّطبيّقيّ في مجال علوم الصّيدلة والعلوم الطبيّة الملّحقة بها.</p>
+             <p>وذلك من خلال تطبيّق طرائق التّعليم الفعّالة والحديثة، وتطوير شخصية الطّالب من خلال برامج تعليّميّة متطوّرة وخلّاقة؛ لتوفيّر المتطلبات الحالية والمستقبليّة لمهنة الصيدلة، وتأهيّل الطّلبة للقيام بواجباتهم في مجال صحة المجتمع والصّحة العامّة.</p>
+          </div>
+        </div> <!-- .item -->
+
+        <div class="media-29101 d-md-flex w-100  ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/engineer.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>*@
+            <h2>كلية الهندسة </h2>
+            <p>تتمثّل رسالة الكليّة في تخريج مهندس متميّز بإمكاناته الأكاديميّة والتّطبيقيّة، ليقوم بإغناء القطاعين العام ّوالخاصّ بخبرات وطاقات تسهم في تطويرهما، ورفدهما بطاقات تقنيّة تتمتع بكفاءة متميّزة.
+ونظراً لكون الحاسوب والاتصالات مجالان سريعا التّطوّر، ويتبع ذلك تبدل مستمر في حاجات سوق العمل، فقد ارتأت الكليّة مراعاة هذين الجانبين في خططها الدّراسيّة، وفي نشاطاتها التّطبيقيّة المرافقة لمهامها الأكاديميّة.</p>
+          </div>
+
+        </div> <!-- .item -->
+           <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/arch.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>*@
+            <h2>كلية الهندسة المدنية و المعمارية</h2>
+              <div class="overflow-hidden">رفد المجتمع بخريجين ذوي كفاءات مميّزة في العلوم النظريّة والتجريبيّة والإبداعيّة في مجالي الهندسة المدنيّة والهندسة المعماريّة، قادرين على نقل معارفهم المكتسبة إلى حيز التطبيّق والممارسة العمليّة بشكل ناجح.
+  تطويّر روح المبادرة والابتكار وريادة الأعمال لدى خريجيها، بما يسهم في تطوير الهوية المعماريّة المحليّة التي تستلّهم من تراثنا الأصيل وتترك للأجيال القادمة أثراً يُفتخر به.
+تقديم برامج تعليميّة وبحثيّة عالية الجودة للمساهمة الفعّالة في تطوير البحث العلمي، والمشاركة في مشاريع بحثيّة ومهنيّة تخدم وتلبي احتياجات خطط التنميّة الوطنيّة والتطويّر المستمر لمهنتي الهندسة المدنيّة والمعماريّة.
+تعزيّز الدّور المهم الذي تلعبه الكليّة للمجتمع في علم تخطيّط المدن، والتصميّم المعماري، والدّراسات الإنشائيّة والتنفيذيّة، وإدارة المشاريع على مستوى القطر.
+تنميّة المجتمع عن طريق نقل ومواكبة التكنولوجيا والمهارات الإبداعيّة والعلميّة وتوطينها في جميع اختصاصات الهندسة المدنيّة والمعماريّة، وخاصّة النّواحي العمرانيّة والمعماريّة والتنفيذيّة تعليّماً وبحثاً وخدمةً للمجتمع.</div>
+           </div>
+        </div> <!-- .item -->
+
+           <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/since.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>*@
+            <h2>كلية العلوم التطبيقية</h2>
+            <p>تسعى كليّة العلوم التطبيقيّة إلى تقديم كافّة المعلومات الأساسيّة في الرياضيات والفيزياء والتّقانة الحيويّة والكيمياء إلى طلبة كليّات الجامعة
+
+مراعيةً  الاختصاصات المختلفة لهذه الكليّات من خلال التطبيقات العلميّة، وتطمح الكليّة إلى تطوير مناهجها باستمرار وتحسين عملها في المختبرات ذات الصلة، وتشجيع الطّلبة على التميّز والتفوّق العلميّ من خلال حلقات البحث المبكّرة والمسابقات العلميّة كأولمبياد الرّياضيات السّنوي</p>
+          </div>
+        </div> <!-- .item -->
+
+
+           <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/busniss.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>*@
+            <h2>كلية الأعمال والإدارة</h2>
+            <p>تسعى كليّة الأعمال والإدارة في جامعة القلمون الخاصّة إلى تكويّن كوادر وروّاد أعمال يتمتعون بمستوى عالٍ من الكفاءة والمهنيّة ، وذلك من خلال بيئة أكاديميّة وبحثيّة مدمجة مع المجتمع تساعد على الابتكار ،وبما يتوافق مع المعايير الأكاديميّة الوطنيّة والدّوليّة</p>
+          </div>
+        </div> <!-- .item -->
+
+           <div class="media-29101 d-md-flex w-100 ">
+          <div class="img">
+            <img src="~/main_interface/faculties_photo/art.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            @*<a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>*@
+            <h2>كلية الأعلام والفنون</h2>
+            <p>تسعى الكليّة إلى تطويّر روح الابتكار والإبداع والريادة في تحقيّق المعرفة، وصقل المهارات، من خلال تعزيز الثقافة البصريّة، ونقل المعارف الفنيّة المكتسبة إلى حيز التطبيّق والممارسة العمليّة.</p>
+          </div>
+        </div> <!-- .item -->
+
+           <div class="media-29101 d-md-flex w-100">
+          <div class="img">
+            <img src="~/logo images/L" alt="Image" >
+          </div>
+          <div class="text">
+          
+             <h2 >كلية الحقوق والعلوم الإنسانية</h2>
+            <p>تسعى كلية الحقوق في جامعة القلمون الخاصة إلى تكويّن جيل متميّز في الدراسات القانونيّة ، لترقى مؤهلاته به إلى مستوى الحاجات والتطوّر المستمر في مجالات الوظيفة العامة بكل تشعباتها ، أو في العمل الحقوقي الحرّ، أو إلى متابعة الدراسات التخصصية العليا .</p>
+              <p>تطمح الجامعة وتعمل على الوصول بخريجيها إلى أفضل مستويات السمعة ، من حيث التمهيّن والتكويّن في مجالات العلاقة الإنسانيّة ، ومهارات التواصل ، وتعليم البرمجة ، واللغات الأجنبية الأكثر انتشاراً . وتحقيقاً لهذه الأهداف ، تتابع الكلّية انتظام دوام الطلبة الإلزامي ، ليكون في أعلى مستوياته ، وتحرص الجامعة إلى استقطاب نُخب متميّزة من الأساتذة والخبرات العلميّة والمهنيّة في العلوم الحقوقيّة والقانونيّة .</p>
+          </div>
+        </div> <!-- .item -->
+
+           <!--<div class="media-29101 d-md-flex w-100">
+          <div class="img">
+            <img src="images/hero_3.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            <a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>
+            <h2>Take your mobile photography to the next level</h2>
+            <p>10101010101010101010 ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga optio dolorem, fugit voluptates sint ducimus praesentium iste!</p>
+          </div>
+        </div> <!-- .item -->
+
+          
+           <!--<div class="media-29101 d-md-flex w-100">
+          <div class="img">
+            <img src="images/hero_3.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="text">
+            <a class="category d-block mb-4" href="#">Travel &mdash; Third Tab</a>
+            <h2>وحدة المتطلبات الجامعية</h2>
+            <p>ما كانت جامعة القلمون الخاصّة  حريصة على أن تقيم بناءها على أسـس متينة تساير روح العصر ومتطلباته، فتقدّم للمجتمع كوادر ذوي شخصيات متوازنة يمتلكون عناصر الثقافة الثالثة التي تتواشج فيها العلوم العلميّة والعلوم الإنسانيّة، واستنارة بتجارب جامعات عالميّة، فقد أُنشأت وحدة المتطلّبات الجامعيّة، لترعى هذا الجانب المعرفيّ المهم، وتنسّق شؤونه ومتطلباته.</p>
+          </div>
+        </div>--><!-- .item -->
+          </div>
+        </div>
+      </div>
+
+            <div    style="background-color: #f8f8f8 " class="border-top-0 border-primary " >
+                <br  style="background-color: #f8f8f8 "/>
+                <br style="background-color: #f8f8f8 "/>
+             
+                <br  style="background-color: #f8f8f8 "/>
+            <div  style="background-color: #f8f8f8 ">
+           <h2  class="bg-warning text-white" data-sr="enter top over 1s, wait 0.3s, move 24px, reset"> تعمل المفاضلة الكترونياً على النحو التالي</h2>
+
+            <div  style="background-color: #f8f8f8 " data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="container1 d-flex align-items-center justify-content-center position-relative flex-wrap  ">
+
+                
+                <div class="card d-flex position-relative flex-column ">
+                    <div class='imgContainer'>
+                        <img src="~/logo images/1286-three-3-key-outline (2).gif">
+                    </div>
+                    <div class="content1  bg-primary text-white">
+                        <h2>المرحلة الثالثة</h2>
+                        <h4>وفي هذه المنزلة تكون الأحزان مسيطره أو ما ضدها من أفراح عامرة ,واللبيب العاقل يدرك أن كل ما قد قدّر بيد الجبار المقتدر </h4>
+                    </div>
+                </div>
+                
+
+<div class="card d-flex position-relative flex-column ">
+                    <div class='imgContainer  '>
+                        <img src="~/logo images/1285-two-2-key-outline.gif">
+                    </div>
+                    <div class="content1  bg-primary text-white">
+    <h2>المرحلة الثانية</h2>
+    <h5>وفي هذه المرحلة يبدأ التمحيص والنظر على أساس العلم والبصر لِيُعلمَ الطالب أصدق أم فجر وعلى أساس النظر يكون  الطالب مرفوضاً أو معتبر</h5></div>
+                </div>
+
+                <div class="card d-flex position-relative flex-column ">
+                    <div class='imgContainer'>
+                        <img src="~/logo images/1284-one-1-key-outline.gif">
+                    </div>
+                    <div class="content1  bg-primary text-white">
+                        <h2>المرحلة الأولى</h2>
+                        <h4>تبتدأ بقيام الطالب في تسجيل بريده الإلكتروني في موقع المفاضلة ثم ما يلبث أن يقوم بتحرير الأقلام وإطلاق الستار عن معلوماته الشخصية وعلاماته الزفتية مفتتحاً بإسمه وكنيته وخاتما بصور شهاداته ورغبته</h4>
+                    </div>
+                </div>
+            </div>
+     @*</div>*@
+                </div>
+            @*</div>*@
+	<!-- ABOUT ENDS -->
+                <div class="containerlogs"  data-sr="enter top over 1s, wait 0.3s, move 24px, reset">
+                   <h3 style="text-decoration-color:#ff0000">الرجاء تحميل دليل التسجيل في المفاضلة من  هنا</h3>
+                <div class="vn-blue" style="text-align: center;">
+<a href="~/main_interface/file.txt" class="btn-wrap" download>DOWNLOAD</a>
+</div>
+</div>
+                  
+                <br/>
+                <br/>
+                <br/>
+	</div>
+
+ 
+	<!-- SUBSCRIBE -->
+		<section id="subscribe">
+			<div class="container">
+				<i data-sr="ease-in over 1s, reset" class="fa fa-envelope icontop"></i>
+				<div class="row text-center">
+					<div class="col-md-12 ">
+						<h2 data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="white-text position-relative" >الرجاء تسجيل في الموقع بواسطة البريد الإلكتروني</h2>
+						@*<h5 data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="white-text">Stay up2date with climb-up</h5>*@
+						<!-- MAILCHIMP FORM -->
+						<form id="mc_form" role="form">
+							@*<input data-sr="enter top over 1s, wait 0.3s, move 24px, reset" type="email" class="form-control" id="mc-email" name="mc-email" placeholder="Your Email" />*@
+							<button data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" type="submit" class="button-leweb position-relative">إضغط هنا</button>
+							@*<label for="mc-email" class="mc-email"></label>*@
+						</form>
+						<!-- MAILCHIMP FORM ENDS -->
+					</div>
+				</div>
+			</div>	
+		</section>
+	<!-- SUBSCRIBE ENDS -->
+	
+	<!-- CONTACT US -->
+		<section id="contact">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-12 ">
+						<!-- CONTACT FORM -->
+						<form method="post" action="">
+							<h3 data-sr="enter top over 1s, wait 0.3s, move 24px, reset" class="contact-info text-center">او يمكنكم تسجيل الدخول لتعديل بيانات المفاضلة وتلقي النتيجة</h3>
+							@*<div data-sr="enter left over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-6">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" />
+							</div>*@
+
+
+							@*<div data-sr="enter right over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Your Email" />
+							</div>
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<input type="text" class="form-control" id="phone" name="phone" placeholder="Password" />
+							</div>*@
+
+
+							@*<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-md-12">
+								<textarea cols="60" rows="3" id="comment" name="comment" class="form-control" placeholder="Write your comment here..."></textarea>
+							</div>*@
+							<div data-sr="enter bottom over 1s, wait 0.3s, move 24px, reset" class="form-group col-sm-12 ">
+								<button type="submit" class="button-leweb">دخول</button>
+							</div>
+						</form>
+									
+						<!-- AFTER SENDING MESSAGE -->
+						<div id="success" class="col-md-12 col-sm-12 text-center">
+							<i class="fa fa-check-circle"></i>
+							<strong>Message successfully sent</strong>
+							<p>Thanks for contacting us. We will respond to you as soon as possible!</p>
+						</div>									
+						<!-- CONTACT FORM ENDS -->	
+					</div>				
+				</div>
+			</div>
+		</section>
+	<!-- CONTACT ENDS -->
+	
+	
+		<footer id="footer">
+			<div class="container">
+				<div class="row text-center">	
+					<p>
+						&copy; 2022 Kalamoon unvirsty  <p>--</p>
+						<span class="social">
+							<a href="https://ar-ar.facebook.com/kalamoonofficial/"><i class="fa fa-facebook-square"></i></a>
+							<a href="http://www.uok.edu.sy/"><i class="fa fa-edge" aria-hidden="false"></i></a> 
+							@*<a href="#"><i class="fa fa-google-plus-square"></i></a>*@
+						</span>
+					</p>
+				</div>
+			</div>		
+		</footer>
+	<!-- FOOTER ENDS -->	
+
+	
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="~/main_interface/js/bootstrap.min.js"></script>
+		<!-- SMOOTH SCROLL -->
+		<script src="~/main_interface/js/smooth-scroll.min.js"></script>
+		<!-- PARALLAX IMG -->
+		<script src="~/main_interface/js/jquery.parallax-1.1.3.js"></script>
+		<!-- SCROLL REVEAL -->
+		<script src="~/main_interface/js/scrollReveal.min.js"></script>
+		<!-- FUNCTIONS -->
+		<script src="~/main_interface/js/functions.js"></script>
+@*<script src="~/main_interface/2/js/jquery-3.3.1.min.js"></script>*@
+<script src="~/main_interface/2/js/owl.carousel.min.js"></script>
+<script src="~/main_interface/2/js/main.js"></script>
+</body>
+</html>
+

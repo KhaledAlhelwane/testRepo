@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Addmition__Elgibilty_K_A.View_Model.setting_of_specialist_ViwModel>
+
+@{
+    ViewData["Title"] = "Index_setting_of_specialties";
+    var x = 0;
+    DateTime y = DateTime.Now;
+    var type = "";
+}
+
+<h1>Universty's specialties</h1>
+@{ foreach (var item in Model)
+    {
+        x = item.Status_Of_A_E.semesterNo;
+        y = item.Status_Of_A_E.semesterDate;
+        type = item.Status_Of_A_E.Type_Of_admission_elgibilty;
+    };
+
+
+}
+<p>
+    <a asp-action="Create">Create New</a> <br />
+    <th>
+       welcome to the semtere number @x <br/> 
+        semester date @y <br />
+        type of the addmission eligibility is @type <br />
+    <th>
+    </th>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.specialist)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chair_count)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Minemum_rate)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        
+
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.specialist)
+
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Chair_count)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Minemum_rate)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit_Setting_of_speclaties", new { id = item.id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                @Html.ActionLink("Delete", "Delete_Setting_of_speclaties", new { id = item.id })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

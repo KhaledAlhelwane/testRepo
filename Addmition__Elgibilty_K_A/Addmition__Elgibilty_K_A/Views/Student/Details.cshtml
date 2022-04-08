@@ -1,0 +1,72 @@
+﻿@model Addmition__Elgibilty_K_A.Model.admission_eligibility_request
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>admission_eligibility_request</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.The_Rate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.The_Rate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.city_of_high_school_cirtificate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.city_of_high_school_cirtificate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.date_of_high_school_cirtificate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.date_of_high_school_cirtificate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.type_of_cirtificate_sy_or_forighn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.type_of_cirtificate_sy_or_forighn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Image_of_crtificat_URL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Image_of_crtificat_URL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.front_image_of_identity_URL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.front_image_of_identity_URL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.back_image_of_identity_URL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.back_image_of_identity_URL)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.check_recipt_image_URL)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.check_recipt_image_URL)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,244 @@
+﻿@model Addmition__Elgibilty_K_A.Model.Type_of_certificate
+
+@{
+    ViewData["Title"] = "Create__toc";
+    Layout = "AdminLayout";
+}
+
+<div >
+    <div class="row justify-content-start">
+        <div class="col-2">
+            <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+                <!-- Sidebar - Brand -->
+                <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                    <div class="sidebar-brand-icon rotate-n-15">
+                        <i class="fas fa-laugh-wink"></i>
+                    </div>
+                    <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                </a>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider my-0">
+
+                <!-- Nav Item - Dashboard -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Faculty
+                </div>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <i class="fas fa-fw fa-cog"></i>
+                        <span>Components</span>
+                    </a>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Components:</h6>
+                            <a class="collapse-item" asp-action="Create_Faculty">Create</a>
+                            <a class="collapse-item" asp-action="Index_Faulty">Create</a>
+
+
+                            @*<a class="collapse-item"  asp-action="Delete_faculty">Delete</a>*@
+                        </div>
+                    </div>
+                </li>
+                <div class="sidebar-heading">
+                    Type of certificate
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                        <i class="fas fa-fw fa-wrench"></i>
+                        <span>Utilities</span>
+                    </a>
+                    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Custom Utilities:</h6>
+                            <a class="collapse-item" asp-action="Create__toc">Create</a>
+                            <a class="collapse-item" asp-action="Index_toc">All</a>
+
+                        </div>
+                    </div>
+                </li>
+                <!-- Nav Item - Utilities Collapse Menu -->
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Addons
+                </div>
+
+                <!-- Nav Item - Pages Collapse Menu -->
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Pages</span>
+                    </a>
+                    <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Login Screens:</h6>
+                            <a class="collapse-item" asp-action="Create_setting_of_admition_elgibilty">Create</a>
+                            <a class="collapse-item" asp-action="Index_setting_of_admition_elgibilty">All</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseX" aria-expanded="true" aria-controls="collapseX">
+                        <i class="fas fa-fw fa-folder"></i>
+                        <span>Pages</span>
+                    </a>
+                    <div id="collapseX" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                        <div class="bg-white py-2 collapse-inner rounded">
+                            <h6 class="collapse-header">Login Screens:</h6>
+                            <a class="collapse-item" asp-action="Create_setting_of_specialties">Create</a>
+                            <a class="collapse-item" asp-action="Index_setting_of_specialties">All</a>
+                        </div>
+                    </div>
+                </li>
+
+
+                <!-- Nav Item - Charts -->
+                <li class="nav-item">
+                    <a class="nav-link" href="charts.html">
+                        <i class="fas fa-fw fa-chart-area"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+
+                <!-- Nav Item - Tables -->
+                <li class="nav-item">
+                    <a class="nav-link" href="tables.html">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+
+                <!-- Divider -->
+                <hr class="sidebar-divider d-none d-md-block">
+
+                <!-- Sidebar Toggler (Sidebar) -->
+                <div class="text-center d-none d-md-inline">
+                    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+                </div>
+
+                <!-- Sidebar Message -->
+                <div class="sidebar-card d-none d-lg-flex">
+                    <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                    <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                    <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                </div>
+
+            </ul>
+
+        </div>
+        <div class="col-4">
+            <form asp-action="Create__toc">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="id" class="control-label"></label>
+                    <input asp-for="id" class="form-control" />
+                    <span asp-validation-for="id" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Type" class="control-label"></label>
+                    <input asp-for="Type" class="form-control" />
+                    <span asp-validation-for="Type" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <div class="container">
+
+        <div class="row justify-content-start">
+
+
+
+
+            <div class="col-md-">
+              
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--<form class="user" asp-action="Create__toc">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input asp-for="id" type="text" class="form-control form-control-user" id="exampleFirstName" placeholder="id">
+                <span asp-validation-for="id" class="text-danger"></span>
+            </div>
+            <div class="col-sm-6">
+                <input asp-for="Type" type="text" class="form-control form-control-user" id="exampleLastName" placeholder="Type">
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+        </div>-->
+    @*<div class="form-group">
+            <input type="email" class="form-control form-control-user" id="exampleInputEmail" placeholder="Email Address">
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password">
+            </div>
+            <div class="col-sm-6">
+                <input type="password" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="Repeat Password">
+            </div>
+        </div>*@
+    <!--<div>
+    <input type="submit" value="Create"  class="btn btn-primary btn-user btn-block"/>
+    </div>-->
+    @*<a href="login.html" class="btn btn-primary btn-user btn-block">
+            Register Account
+        </a>*@
+    @*<hr>
+        <a href="index.html" class="btn btn-google btn-user btn-block">
+            <i class="fab fa-google fa-fw"></i> Register with Google
+        </a>
+        <a href="index.html" class="btn btn-facebook btn-user btn-block">
+            <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+        </a>*@
+    <!--</form>-->
+
+
+
+
+
+    <hr />
+
+
+    <div>
+        <a asp-action="Index_toc">Back to List</a>
+    </div>
+
+    @*@section Scripts {
+            @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+        }*@

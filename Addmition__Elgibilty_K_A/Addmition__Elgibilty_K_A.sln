@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addmition__Elgibilty_K_A", "Addmition__Elgibilty_K_A\Addmition__Elgibilty_K_A.csproj", "{5EAB336A-1234-4BF9-B4CE-A250884E0E8B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EAB336A-1234-4BF9-B4CE-A250884E0E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EAB336A-1234-4BF9-B4CE-A250884E0E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EAB336A-1234-4BF9-B4CE-A250884E0E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EAB336A-1234-4BF9-B4CE-A250884E0E8B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54F74D12-74D8-4003-A202-556896B190D6}
+	EndGlobalSection
+EndGlobal

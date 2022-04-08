@@ -1,0 +1,55 @@
+﻿@model IEnumerable<Addmition__Elgibilty_K_A.Model.Faculty>
+
+@{
+    ViewData["Title"] = "Index_Faulty";
+  
+}
+
+<h1>Index_Faulty</h1>
+
+<p>
+    <a asp-action="Create_Faculty">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculty_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.specialization)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Type_of_certificate.Type)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Faculty_name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.specialization)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Type_of_certificate.Type)
+                </td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit_Fuclty", new { id = item.id }) |
+                    @Html.ActionLink("Delete", "Delete_faculty", new { id = item.id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
