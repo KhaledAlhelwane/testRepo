@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\planet\\Desktop\\the latest version\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj": {}
+    "C:\\Users\\planet\\Desktop\\khaeldgithub\\testRepo\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj": {}
   },
   "projects": {
-    "C:\\Users\\planet\\Desktop\\the latest version\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj": {
+    "C:\\Users\\planet\\Desktop\\khaeldgithub\\testRepo\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\planet\\Desktop\\the latest version\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj",
+        "projectUniqueName": "C:\\Users\\planet\\Desktop\\khaeldgithub\\testRepo\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj",
         "projectName": "Addmition__Elgibilty_K_A",
-        "projectPath": "C:\\Users\\planet\\Desktop\\the latest version\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj",
+        "projectPath": "C:\\Users\\planet\\Desktop\\khaeldgithub\\testRepo\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj",
         "packagesPath": "C:\\Users\\planet\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\planet\\Desktop\\the latest version\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\obj\\",
+        "outputPath": "C:\\Users\\planet\\Desktop\\khaeldgithub\\testRepo\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\planet\\AppData\\Roaming\\NuGet\\NuGet.Config",

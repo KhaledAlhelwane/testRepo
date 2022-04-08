@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9DW6nrOjW6pVAJKQ0jzBcVwnTq7kAHXFnlVBtShyU9KQhJ6g4nLQbpQPJTKQ1UAc2BMkzxGGlmhBOEPrz2bDgQ==",
+  "dgSpecHash": "Njx4rGzU0TfcgDlK86/oAYn5FxWN9LZfl1rdEzvJLAGEhHbPhFE++DER+HX2KNoOoSQrqjUCs2UB/mTecOmM3Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\planet\\Desktop\\the latest version\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj",
+  "projectFilePath": "C:\\Users\\planet\\Desktop\\khaeldgithub\\testRepo\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A\\Addmition__Elgibilty_K_A.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\planet\\.nuget\\packages\\buildwebcompiler\\1.12.405\\buildwebcompiler.1.12.405.nupkg.sha512",
     "C:\\Users\\planet\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
