@@ -1,0 +1,35 @@
+1.1 Introduction: 
+        Today web development has many affects in the world of businesses and economy, and tech companies competes with each other to produce tools that help developers in their work and for sure to win the big amount of the rewards and to control the market of programming and the tools, so as we are IT students it is our duty to get the benefits of new technologies to produce something helpful and useful for us and for our community and this is indeed what the project aimed to.
+ 
+1.2 Project objective
+       The project main goal is to automate the process of admission eligibility, and this can be achieved by building a website application which for sure makes applying to the university easier, decrease papers work and eliminate employee recruitment, the app works in three phases ,the first one represents by receiving information from students that want to get the admission at one of kalamoon ‘s faculties , and these information collect and save in a database, the second phase does by admission and registration officers ,the officer job is to check students information and edits it if necessary, the third phase is to apply a sorting algorithm on the information that has checked and then will be an announcement of the results to clarify who deserve a place in one of kalamoon ‘s faculties.
+
+1.3 Main problems 
+         Generally, paper work takes time and effort especially from the employees, also it takes a wide physical space and these problems will grow bigger and bigger depend on the situation, as for our university thousands of the requesting documents will be submitted to the Directorate of Admission and Registration, below the photo will clear what we mean:
+ 
+                                                                           
+                                                                                                                            
+It was the admission eligibility for the year 2022-2021 and this photo we took it by own phone in 2021/9/28 wondering how will employees deal with all these files! 
+This lead us to the second problem, there were no enough employees for helping students filling the document so that require some volunteers to do the mission. [1] 
+ 
+                                                                                                 
+So these two problems were about physical size and employee recruited aspects, the third problem was more sophisticated and hard especially for employee, which was the limitation of time, we had met Dr. Saed Al-Nazer who was the director of the admission eligibility for 2022-2021 at kalamoon university and as he said: there were 4000 student documents that need to turn into a database (manual Automation) and only seven employees work on and they must finish it within 5 days only, so that lead to many problems:
+•	violent and very busy employees that they have to work double.
+•	Big human mistakes in the process of manual automation like missing values, changing wishes of some students wrongly which cause for some students to lose a chance to get a place at the university. 
+So these problems urge our faculty (“IT section’) to encourage us to make a solution for these problems, so here we are ;).
+
+1.4 project tools
+•	For the back end we use Asp.net core 5.
+•	For the front end we use bootstrap 5.
+•	For Database we use Microsoft SQL server 2014 and the Entity frame work core 5.
+•	For the client side validation, we use JQuery library.
+•	For Authentication we use identity Authentication package presented from Microsoft.
+•	For team collaboration we use GitHub. 
+1.5 What has been done previously in this field?
+1.	 Currently there is a desktop program that help employees to know who is acceptable or not (the program take an excel sheet as input which contains the student information, the output is the results of  acceptable student) so it is good of its algorithm but it is not flexible to solve the problems that we have said previously.
+2.	There were a final Project with the title:
+(Process maker (أتمتة عملية مفاضلة طلاب جامعة القلمون باستخدام نظام إدارة تدفق العمل المفتوح 
+It presented in 2020/7/27 by Maryam Sheikh Suleiman and Najwa Saeed Maad, we were told personally by Najwa that A committee did not like to make the project applicable on the next admission eligibility because its user interfaces did not look easy to use.
+
+
+
